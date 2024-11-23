@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1 {
+    color: #678ef5;
+    font-size: 36px;
+}
+
+h2 {
+    color: #0066cc;
+    font-size: 24px;
+}
+
+h3 {
+    color: #cc6600;
+    font-size: 18px;
+}
+
+
+.rojoMasOscuro {
+    color: #650505
+}
+
+.verdeMasOscuro {
+    color: #1b6f04
+}
+
+.violetaMasOscuro {
+    color: #36023d
+}
+
+.rosaMasOscuro {
+    color: #fb0cdb
+}
+
+.marronMasOscuro {
+    color: #7a2603
+}
+
+
+
+#parrafoDiseñoMultimedia {
+    color: #00ff32
+}
+
+#parrafoDiseñoWeb {
+    color: pink
+}
+
+
+#CortosParrafo {
+    color: #e0b6f3;
+}
+
+#introduccion {
+    color: red;
+}
+
+#parrafoFormacionProfesional {
+    color: rgb(239, 71, 189);
+}
+
+#carreras h3, #cursos h3 {
+    color: orange ;
+    font-size: 20px
+}

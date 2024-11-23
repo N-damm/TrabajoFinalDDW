@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <div id="saludo"></div>
+
+    <script>
+        function mostrarSaludo() {
+            const primerNombre = "Juan";
+            const apellido = "Pérez";
+            const divSaludo = document.getElementById("saludo");
+            divSaludo.textContent = `Hola, ${primerNombre} ${apellido}`;
+        }
+
+        window.onload = mostrarSaludo;
+    </script>
+</body>
+</html>

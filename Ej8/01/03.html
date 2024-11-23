@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <form id="trianguloForm">
+        <label for="lado1">Lado 1:</label>
+        <input type="number" id="lado1" required><br><br>
+        
+        <label for="lado2">Lado 2:</label>
+        <input type="number" id="lado2" required><br><br>
+        
+        <label for="lado3">Lado 3:</label>
+        <input type="number" id="lado3" required><br><br>
+        
+        <button type="button" onclick="determinarTriangulo()">Verificar tipo</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function determinarTriangulo() {
+            const lado1 = parseFloat(document.getElementById("lado1").value);
+            const lado2 = parseFloat(document.getElementById("lado2").value);
+            const lado3 = parseFloat(document.getElementById("lado3").value);
+            
+            const tipo = obtenerTipoTriangulo(lado1, lado2, lado3);
+            mostrarResultado(tipo);
+        }
+
+        function obtenerTipoTriangulo(lado1, lado2, lado3) {
+            if (lado1 === lado2 && lado2 === lado3) {
+                return "equilátero";
+            } else if (lado1 === lado2 || lado2 === lado3 || lado1 === lado3) {
+                return "isósceles";
+            } else {
+                return "escaleno";
+            }
+        }
+
+        function mostrarResultado(tipo) {
+            document.getElementById("resultado").textContent = 
+                `El triángulo es ${tipo}`;
+        }
+    </script>
+</body>
+</html>

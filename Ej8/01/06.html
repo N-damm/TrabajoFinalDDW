@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <input type="text" id="nombreInput" placeholder="Ingresa tu nombre">
+    <button onclick="saludar()">Saludar</button>
+    <p id="mensajeSaludo"></p>
+
+    <script>
+        function saludar() {
+            const nombre = document.getElementById("nombreInput").value;
+            if (nombre.trim() === "") {
+                mostrarMensaje("Por favor, ingresa un nombre");
+            } else {
+                mostrarMensaje(`¡Hola, ${nombre}!`);
+            }
+        }
+
+        function mostrarMensaje(mensaje) {
+            document.getElementById("mensajeSaludo").textContent = mensaje;
+        }
+    </script>
+</body>
+</html>

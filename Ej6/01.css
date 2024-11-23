@@ -1,0 +1,92 @@
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* 1. Cambiar el color de fondo para pantallas grandes */
+@media (min-width: 960px) {
+    body {
+        background-color: #333;
+        color: #fff;
+    }
+}
+
+/* 2. Ajustar el tamaño de la fuente para pantallas pequeñas */
+@media (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* 3. Esconder elementos en orientación vertical */
+.sidebar {
+    display: block;
+}
+
+@media (orientation: portrait) {
+    .sidebar {
+        display: none;
+    }
+}
+
+/* 4. Mostrar elementos en orientación horizontal */
+.navbar {
+    display: none;
+}
+
+@media (orientation: landscape) {
+    .navbar {
+        display: block;
+    }
+}
+
+/* 5. Cambiar el diseño de columnas con Flexbox para pantallas pequeñas */
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 6. Aumentar el espacio entre elementos en pantallas grandes */
+.list-item {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+    .list-item {
+        margin-bottom: 20px;
+    }
+}
+
+/* 7. Cambiar la tipografía para títulos en pantallas pequeñas */
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+}
+
+@media (max-width: 576px) {
+    h1, h2, h3 {
+        font-family: 'Arial', sans-serif;
+    }
+}
+
+/* 8. Ajustar el tamaño de imágenes para pantallas pequeñas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 480px) {
+    img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+}

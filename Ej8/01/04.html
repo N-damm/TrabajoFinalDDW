@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <form id="numerosForm">
+        <label for="num1">Número 1:</label>
+        <input type="number" id="num1" required><br><br>
+        
+        <label for="num2">Número 2:</label>
+        <input type="number" id="num2" required><br><br>
+        
+        <label for="num3">Número 3:</label>
+        <input type="number" id="num3" required><br><br>
+        
+        <label for="num4">Número 4:</label>
+        <input type="number" id="num4" required><br><br>
+        
+        <label for="num5">Número 5:</label>
+        <input type="number" id="num5" required><br><br>
+        
+        <button type="button" onclick="analizarNumeros()">Analizar</button>
+    </form>
+
+    <ul id="resultado"></ul>
+
+    <script>
+        function analizarNumeros() {
+            const numeros = obtenerNumeros();
+            const mayor = Math.max(...numeros);
+            const menor = Math.min(...numeros);
+            mostrarResultados(mayor, menor);
+        }
+
+        function obtenerNumeros() {
+            const numeros = [];
+            for (let i = 1; i <= 5; i++) {
+                numeros.push(parseFloat(document.getElementById(`num${i}`).value));
+            }
+            return numeros;
+        }
+
+        function mostrarResultados(mayor, menor) {
+            const ul = document.getElementById("resultado");
+            ul.innerHTML = `
+                <li>El mayor número ingresado es: ${mayor}</li>
+                <li>El menor número ingresado es: ${menor}</li>
+            `;
+        }
+    </script>
+</body>
+</html>
